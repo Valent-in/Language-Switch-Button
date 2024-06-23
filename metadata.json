@@ -2,11 +2,10 @@
   "description": "Switch input language with a single click.",
   "name": "Language Switch Button",
   "shell-version": [
-    "42",
-    "43",
-    "44"
+    "45",
+    "46"
   ],
   "url": "https://github.com/Valent-in/language-switch-button",
   "uuid": "language-switch-button@valent-in",
-  "version": 1
+  "version": 2
 }

@@ -1,7 +1,10 @@
-const Main = imports.ui.main;
-const { GObject, St, Clutter } = imports.gi;
-const PanelMenu = imports.ui.panelMenu;
-const getInputSourceManager = imports.ui.status.keyboard.getInputSourceManager;
+import GObject from 'gi://GObject';
+import St from 'gi://St';
+import Clutter from 'gi://Clutter';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
+import { getInputSourceManager } from 'resource:///org/gnome/shell/ui/status/keyboard.js';
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 let panelButton;
 
@@ -66,16 +69,14 @@ const LangSwitchBtn = GObject.registerClass({
 	}
 });
 
-function init() {
+export default class extends Extension {
+	enable() {
+		panelButton = new LangSwitchBtn();
+		panelButton.enable();
+	}
 
-}
-
-function enable() {
-	panelButton = new LangSwitchBtn();
-	panelButton.enable();
-}
-
-function disable() {
-	panelButton.disable();
-	panelButton = null;
+	disable() {
+		panelButton.disable();
+		panelButton = null;
+	}
 }
