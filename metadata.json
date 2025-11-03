@@ -3,9 +3,12 @@
   "name": "Language Switch Button",
   "shell-version": [
     "45",
-    "46"
+    "46",
+    "47",
+    "48",
+    "49"
   ],
   "url": "https://github.com/Valent-in/language-switch-button",
   "uuid": "language-switch-button@valent-in",
-  "version": 2
+  "version": 3
 }
